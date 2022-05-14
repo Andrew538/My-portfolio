@@ -288,7 +288,7 @@ body {
 }
 
 .no-webp .developer__deskription::after{
-  background-image: url(img/triangle.png); }
+  background-image: url(../img/triangle.png); }
 
 .developer__deskription::after {
   content: "";
@@ -609,4 +609,4 @@ body {
   }
 }
 
-.webp .developer__deskription::after{ background-image: url(img/triangle.webp); }
+.webp .developer__deskription::after{ background-image: url(../img/triangle.webp); }
