@@ -457,13 +457,15 @@ body {
   margin-top: 20px;
 }
 
+@media (max-width: 80em) {
+  .developer__deskription::after {
+    left: 8px !important;
+  }
+}
+
 @media (max-width: 75em) {
   .developer__deskription::before {
     left: -85px;
-  }
-
-  .developer__deskription::after {
-    left: 8px;
   }
 }
 
