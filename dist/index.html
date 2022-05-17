@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20220516113302">
+	<link rel="stylesheet" href="css/style.min.css?_v=20220517165515">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,7 +20,7 @@
 					<button type="button" class="menu__icon icon-menu"><span></span></button>
 					<nav class="menu__body">
 						<ul class="menu__list">
-							<li class="menu__item"><a data-goto=".about" data-goto-top="140" href="#" class="menu__link">Обо мне</a></li>
+							<li class="menu__item"><a data-goto=".about" data-goto-header data-goto-top="100px" href="#" class="menu__link">Обо мне</a></li>
 							<li class="menu__item"><a href="#" class="menu__link">Портфолио</a></li>
 							<li class="menu__item"><a href="#" class="menu__link">Этапы работ</a></li>
 							<li class="menu__item"><a href="#" class="menu__link">Цена</a></li>
@@ -59,39 +59,10 @@
 						</li>
 					</ul>
 				</div>
-				<!-- <nav class="site-nav ">
-			<ul class="site-nav__list">
-				<li class="site-nav__item">
-					<a class="site-nav__link">Обо мне</a> 
-				</li>
-				<li class="site-nav__item">
-					<a class="site-nav__link">Портфолио</a> 
-				</li>
-				<li class="site-nav__item">
-					<a class="site-nav__link">Этапы работ</a> 
-				</li>
-				<li class="site-nav__item">
-					<a class="site-nav__link">Цена</a> 
-				</li>
-				<li class="site-nav__item">
-					<a class="site-nav__link">Обратная связь</a> 
-				</li>
-			</ul>
-		</nav>
-		<div class="site-contacts">
-			<ul class="site-contacts__list">
-				<li class="site-contacts__item">
-					<a class="site-contacts__tel" href="tel:89237777777">8 923 777-77-77</a>
-				</li>
-				<li class="site-contacts__item">
-					<a class="site-contacts__mail" href="mailto:andrew742183@mail.ru">andrew742183@mail.ru</a>
-				</li>
-			</ul>
-		</div> -->
+
 
 			</div>
 		</header>
-
 
 		<main class="page">
 			<section class="banner">
@@ -106,7 +77,7 @@
 					<h1 class="developer__title">Андрей Ломачинский</h1>
 					<p class="developer__deskription">web-разработчик</p>
 					<div class="project">
-						<h3 class="project__title">Обсудить проект</h3>
+						<button class="project__button" data-popup=".popup">Обсудить проект</button>
 						<ul class="social">
 							<li class="social__item">
 								<a href="№">Vk</a>
@@ -176,18 +147,41 @@
 		</footer>
 	</div>
 
-	<!-- <div id="popup" aria-hidden="true" class="popup">
-	<div class="popup__wrapper">
-		<div class="popup__content">
-			<button data-close type="button" class="popup__close">Закрыть</button>
-			<div class="popup__text">
+	<div id="popup" aria-hidden="true" class="popup">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<div class="popup__button">
+					<button data-close type="button" class="popup__close"></button>
+				</div>
+				<div class="popup__text">
+					<h3 class="popup__title">Расскажите о своем проекте</h3>
+					<p class="popup__deskription">Заполните все поля, и я свяжусь с вами в ближайшее время</p>
+				</div>
+				<form class="form" action="">
+					<div class="form__input-box">
+						<label for="formContact" class="form__label">Телефон или почта</label>
+						<input id="formContact" autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="Введите телефон" class="form__input">
+					</div>
+
+					<div class="form__item">
+						<div class="form__label">Выберите удобный способ связи</div>
+						<select name="age" class="select">
+							<option selected>Telegram</option>
+							<option>WhatsApp</option>
+							<option>Viber</option>
+							<option>Звонок на телефон</option>
+							<option>SMS сообщение</option>
+						</select>
+					</div>
+					<button type="submit" class="form__button">Отправить</button>
+				</form>
+
 			</div>
 		</div>
 	</div>
-</div> -->
 
 
-	<script src="js/app.min.js?_v=20220516113302"></script>
+	<script src="js/app.min.js?_v=20220517165515"></script>
 
 
 
