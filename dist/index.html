@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20220517165515">
+	<link rel="stylesheet" href="css/style.min.css?_v=20220528235417">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,9 +20,9 @@
 					<button type="button" class="menu__icon icon-menu"><span></span></button>
 					<nav class="menu__body">
 						<ul class="menu__list">
-							<li class="menu__item"><a data-goto=".about" data-goto-header data-goto-top="100px" href="#" class="menu__link">Обо мне</a></li>
+							<li class="menu__item"><a data-goto=".about" data-goto-header data-goto-top="-60px" href="#" class="menu__link">Обо мне</a></li>
 							<li class="menu__item"><a href="#" class="menu__link">Портфолио</a></li>
-							<li class="menu__item"><a href="#" class="menu__link">Этапы работ</a></li>
+							<li class="menu__item"><a data-goto=".stages-works" data-goto-header data-goto-top="10px" href="#" class="menu__link">Этапы работ</a></li>
 							<li class="menu__item"><a href="#" class="menu__link">Цена</a></li>
 							<li class="menu__item"><a href="#" class="menu__link">Обратная связь</a></li>
 						</ul>
@@ -140,6 +140,62 @@
 					</div>
 				</div>
 			</section>
+			<section class="stages-works">
+				<div class="stages-works__container">
+					<h2 class="stages-works__title" style="visibility: hidden; font-size: 0px; display: inline; width: 0px;">Этапы работы</h2>
+					<ol class="stages-works__list">
+						<li class="stages-works__item stages-works__item_border">
+							<p class="stage-works__text"> <span class="stages-works__text_number">01</span> Вы заказываете сайт</p>
+							<p class="stage-works__deskription">Связываетесь со мной по телефону или через заявку на сайте</p>
+						</li>
+						<li class="stages-works__item ">
+							<p class="stage-works__text"><span class="stages-works__text_number">02</span>Обговариваем детали</p>
+							<p class="stage-works__deskription">Созваниваемся или списываемся любым удобным для вас способом</p>
+						</li>
+						<li class="stages-works__item stages-works__item_border">
+							<p class="stage-works__text"><span class="stages-works__text_number">03</span>Этап программирования</p>
+							<p class="stage-works__deskription">Верстаю сайт по вашему проекту пиксель в пиксель</p>
+						</li>
+					</ol>
+				</div>
+			</section>
+			<section class="portfolio">
+				<div class="portfolio__title-box">
+					<div class="portfolio__container">
+						<h2 class="portfolio__title">Портфолио</h2>
+					</div>
+				</div>
+				<div class="portfolio__bg">
+					<div class="portfolio__container">
+						<div class="portfolio__list">
+							<div class="portfolio__list-block">
+								<div class="portfolio__list-text">
+									<h3 class="portfolio__list-title"><a href="https://andrew538.github.io/Module01-Gym/" target="_blank">Сайт фитнес-зала</a></h3>
+									<ul class="portfolio__list-deskription">
+										<li class="portfolio__list-item">верстка по макету из Figma</li>
+										<li class="portfolio__list-item">наполнение сайта контентом</li>
+										<li class="portfolio__list-item">валидация формы</li>
+									</ul>
+									<p class="time">Затрачено времени: 7 рабочих дней</p>
+								</div>
+								<a href="https://andrew538.github.io/Module01-Gym/" class="portfolio__list-link" target="_blank"><picture><source srcset="img/portfolio_images.webp" type="image/webp"><img class="portfolio__list-image" src="img/portfolio_images.png" alt="Фото сайта"></picture></a>
+							</div>
+							<div class="portfolio__list-block">
+								<div class="portfolio__list-text">
+									<h3 class="portfolio__list-title"><a href="https://andrew538.github.io/Module02-shop/dist/index.html" target="_blank">Сайт онлайн магазина здорового&nbsp;питания</a></h3>
+									<ul class="portfolio__list-deskription">
+										<li class="portfolio__list-item">верстка по макету из Figma</li>
+										<li class="portfolio__list-item">наполнение сайта контентом</li>
+										<li class="portfolio__list-item">валидация формы</li>
+									</ul>
+									<p class="portfolio__list-time">Затрачено времени: 7 рабочих дней</p>
+								</div>
+								<a href="https://andrew538.github.io/Module02-shop/dist/index.html" class="portfolio__list-link portfolio__list-link_two"><picture><source srcset="img/food.webp" type="image/webp"><img class="portfolio__list-image" src="img/food.png" alt=""></picture></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
 		</main>
 		<footer class="footer">
 			<div class="footer__container">
@@ -181,7 +237,7 @@
 	</div>
 
 
-	<script src="js/app.min.js?_v=20220517165515"></script>
+	<script src="js/app.min.js?_v=20220528235417"></script>
 
 
 
