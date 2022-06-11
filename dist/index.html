@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20220528235417">
+	<link rel="stylesheet" href="css/style.min.css?_v=20220611192210">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,16 +20,16 @@
 					<button type="button" class="menu__icon icon-menu"><span></span></button>
 					<nav class="menu__body">
 						<ul class="menu__list">
-							<li class="menu__item"><a data-goto=".about" data-goto-header data-goto-top="-60px" href="#" class="menu__link">Обо мне</a></li>
+							<li class="menu__item"><a data-goto=".about" data-goto-header data-goto-top="20px" href="#" class="menu__link">Обо мне</a></li>
 							<li class="menu__item"><a href="#" class="menu__link">Портфолио</a></li>
-							<li class="menu__item"><a data-goto=".stages-works" data-goto-header data-goto-top="10px" href="#" class="menu__link">Этапы работ</a></li>
+							<li class="menu__item"><a data-goto=".stages-works" data-goto-header data-goto-top="0px" href="#" class="menu__link">Этапы работ</a></li>
 							<li class="menu__item"><a href="#" class="menu__link">Цена</a></li>
 							<li class="menu__item"><a href="#" class="menu__link">Обратная связь</a></li>
 						</ul>
 						<div class="site-contacts contacts-modal">
 							<ul class="site-contacts__list contacts-modal__list">
 								<li class="site-contacts__item">
-									<a class="site-contacts__tel" href="tel:89237777777">8 923 777-77-77</a>
+									<a class="site-contacts__tel site-contacts__tel_border" href="tel:89237777777">8 923 777-77-77</a>
 								</li>
 								<li class="site-contacts__item">
 									<a class="site-contacts__mail site-contacts__mail_enable" href="mailto:andrew742183@mail.ru">andrew742183@mail.ru</a>
@@ -77,7 +77,7 @@
 					<h1 class="developer__title">Андрей Ломачинский</h1>
 					<p class="developer__deskription">web-разработчик</p>
 					<div class="project">
-						<button class="project__button" data-popup=".popup">Обсудить проект</button>
+						<button class="modal-button" data-popup=".popup">Обсудить проект</button>
 						<ul class="social">
 							<li class="social__item">
 								<a href="№">Vk</a>
@@ -176,7 +176,7 @@
 										<li class="portfolio__list-item">наполнение сайта контентом</li>
 										<li class="portfolio__list-item">валидация формы</li>
 									</ul>
-									<p class="time">Затрачено времени: 7 рабочих дней</p>
+									<p class="portfolio__list-time">Затрачено времени: 7 рабочих дней</p>
 								</div>
 								<a href="https://andrew538.github.io/Module01-Gym/" class="portfolio__list-link" target="_blank"><picture><source srcset="img/portfolio_images.webp" type="image/webp"><img class="portfolio__list-image" src="img/portfolio_images.png" alt="Фото сайта"></picture></a>
 							</div>
@@ -184,14 +184,186 @@
 								<div class="portfolio__list-text">
 									<h3 class="portfolio__list-title"><a href="https://andrew538.github.io/Module02-shop/dist/index.html" target="_blank">Сайт онлайн магазина здорового&nbsp;питания</a></h3>
 									<ul class="portfolio__list-deskription">
-										<li class="portfolio__list-item">верстка по макету из Figma</li>
+										<li class="portfolio__list-item">верстка по макету PSD</li>
 										<li class="portfolio__list-item">наполнение сайта контентом</li>
-										<li class="portfolio__list-item">валидация формы</li>
+										<li class="portfolio__list-item">счетчик колличества товаров</li>
+										<li class="portfolio__list-item">сортировка каталога товаров</li>
 									</ul>
 									<p class="portfolio__list-time">Затрачено времени: 7 рабочих дней</p>
 								</div>
-								<a href="https://andrew538.github.io/Module02-shop/dist/index.html" class="portfolio__list-link portfolio__list-link_two"><picture><source srcset="img/food.webp" type="image/webp"><img class="portfolio__list-image" src="img/food.png" alt=""></picture></a>
+								<a href="https://andrew538.github.io/Module02-shop/dist/index.html" class="portfolio__list-link portfolio__list-link_two" target="_blank"><picture><source srcset="img/food.webp" type="image/webp"><img class="portfolio__list-image" src="img/food.png" alt=""></picture></a>
 							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="additionally">
+				<div class="additionally__container">
+					<h2 class="additionally__title" style="visibility: hidden; font-size: 0px; display: inline; width: 0px;">Дополнительные услуги</h2>
+					<p class="additionally__deskription">Помимо создания сайтов и посадочных страниц я занимаюсь: настройкой контекстной рекламы в системах Яндекс.Директ и Google AdWords, а так же поисковым продвижением сайтов</p>
+				</div>
+			</section>
+			<section class="excellence">
+				<div class="excellence__container">
+					<h2 class="excellence__title" style="visibility: hidden; font-size: 0px; display: inline; width: 0px;">Приемущества работы со мной</h2>
+					<div class="excellence-grid">
+						<div class="excellence-grid__item excellence-grid__item_price">
+							<div class="excellence-grid__box">
+								<h3 class="excellence-grid__title">Актуальные цены</h3>
+								<p class="excellence-grid__text ">Ничего лишнего, без переплат, 100% отработка ваших денег</p>
+							</div>
+						</div>
+						<div class="excellence-grid__item excellence-grid__item_experience">
+							<div class="excellence-grid__box">
+								<h3 class="excellence-grid__title">Более 2-х лет опыта </h3>
+								<p class="excellence-grid__text">Это моя основная деятельность, создано более 150+ сайтов</p>
+							</div>
+						</div>
+						<div class="excellence-grid__item excellence-grid__item_time">
+							<div class="excellence-grid__box">
+								<h3 class="excellence-grid__title">Оптимальные сроки</h3>
+								<p class="excellence-grid__text">Создание сайта любой сложностив самые сжатые сроки</p>
+							</div>
+						</div>
+						<div class="excellence-grid__item excellence-grid__item_connection">
+							<div class="excellence-grid__box">
+								<h3 class="excellence-grid__title">Всегда на связи</h3>
+								<p class="excellence-grid__text">Не теряюсь и не проматываю сроки. Подхожу ответственно</p>
+							</div>
+						</div>
+						<div class="excellence-grid__item excellence-grid__item_code">
+							<div class="excellence-grid__box">
+								<h3 class="excellence-grid__title">Чистый код</h3>
+								<p class="excellence-grid__text">HTML код без всего лишнего, плюс адаптив под все устройства</p>
+							</div>
+						</div>
+						<div class="excellence-grid__item excellence-grid__item_problem">
+							<div class="excellence-grid__box">
+								<h3 class="excellence-grid__title">Поддержка сайта</h3>
+								<p class="excellence-grid__text">Быстро устраню любую проблему на вашем сайте</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="popular-technologies">
+				<div class="popular-technologies__container">
+					<div class="popular-technologies__grid">
+						<div class="popular-technologies__item popular-technologies__item_border-one">
+							<div class="popular-technologies__cover">
+								<a class="popular-technologies__link popular-technologies__link_html" href="#"></a>
+							</div>
+							<div class="popular-technologies__tooltip-box">
+								<div class="popular-technologies__tooltip">
+									<span class="popular-technologies__tooltip-title">HTML</span>
+									<span class="popular-technologies__tooltip-text">каскадные таблицы стилей</span>
+								</div>
+							</div>
+						</div>
+						<div class="popular-technologies__item popular-technologies__item_border-one">
+							<div class="popular-technologies__cover">
+								<a class="popular-technologies__link popular-technologies__link_css" href="#"></a>
+							</div>
+							<div class="popular-technologies__tooltip-box">
+								<div class="popular-technologies__tooltip">
+									<span class="popular-technologies__tooltip-title">HTML</span>
+									<span class="popular-technologies__tooltip-text">каскадные таблицы стилей</span>
+								</div>
+							</div>
+						</div>
+						<div class="popular-technologies__item popular-technologies__item_border-one">
+							<div class="popular-technologies__cover">
+								<a class="popular-technologies__link popular-technologies__link_js _hover" href="#"></a>
+							</div>
+							<div class="popular-technologies__tooltip-box">
+								<div class="popular-technologies__tooltip">
+									<span class="popular-technologies__tooltip-title">HTML</span>
+									<span class="popular-technologies__tooltip-text">каскадные таблицы стилей</span>
+								</div>
+							</div>
+						</div>
+						<div class="popular-technologies__item popular-technologies__item_border-three">
+							<div class="popular-technologies__cover">
+								<a class="popular-technologies__link popular-technologies__link_jq hover" href="#"></a>
+							</div>
+							<div class="popular-technologies__tooltip-box">
+								<div class="popular-technologies__tooltip">
+									<span class="popular-technologies__tooltip-title">HTML</span>
+									<span class="popular-technologies__tooltip-text">каскадные таблицы стилей</span>
+								</div>
+							</div>
+						</div>
+						<div class="popular-technologies__item popular-technologies__item_border-two">
+							<div class="popular-technologies__cover">
+								<a class="popular-technologies__link popular-technologies__link_bootstrap hover" href=""></a>
+							</div>
+							<div class="popular-technologies__tooltip-box">
+								<div class="popular-technologies__tooltip">
+									<span class="popular-technologies__tooltip-title">HTML</span>
+									<span class="popular-technologies__tooltip-text">каскадные таблицы стилей</span>
+								</div>
+							</div>
+						</div>
+						<div class="popular-technologies__item popular-technologies__item_border-two">
+							<div class="popular-technologies__cover">
+								<a class="popular-technologies__link popular-technologies__link_php" href="#"></a>
+							</div>
+							<div class="popular-technologies__tooltip-box">
+								<div class="popular-technologies__tooltip">
+									<span class="popular-technologies__tooltip-title">HTML</span>
+									<span class="popular-technologies__tooltip-text">каскадные таблицы стилей</span>
+								</div>
+							</div>
+						</div>
+						<div class="popular-technologies__item popular-technologies__item_border-two">
+							<div class="popular-technologies__cover">
+								<a class="popular-technologies__link popular-technologies__link_vue" href="#"></a>
+							</div>
+							<div class="popular-technologies__tooltip-box">
+								<div class="popular-technologies__tooltip">
+									<span class="popular-technologies__tooltip-title">HTML</span>
+									<span class="popular-technologies__tooltip-text">каскадные таблицы стилей</span>
+								</div>
+							</div>
+						</div>
+						<div class="popular-technologies__item ">
+							<div class="popular-technologies__cover">
+								<a class="popular-technologies__link popular-technologies__link_wordpres" href="#"></a>
+							</div>
+							<div class="popular-technologies__tooltip-box">
+								<div class="popular-technologies__tooltip">
+									<span class="popular-technologies__tooltip-title">HTML</span>
+									<span class="popular-technologies__tooltip-text">каскадные таблицы стилей</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="tariff">
+				<div class="tariff__container">
+					<div class="tariff__header">
+						<h2 class="tariff__title">Тарифы</h2>
+						<p class="tariff__deskription">Представленные ниже цены зависят не только от того какой сайт вы хотите. Конечная цена будет озвучена после прочтения Вашего ТЗ</p>
+					</div>
+					<div class="tariff__article">
+						<div class="tariff__article-box-left">
+							<div class="tariff__article-text">
+								<h3 class="tariff__article-title">Разработка<br>лэндинга или сайт визитки</h3>
+								<p class="tariff__article-deskription">Небольшой сайт состоящий из одной страницы</p>
+							</div>
+							<button class="modal-button modal-button__tariff" data-popup=".popup">Обсудить проект</button>
+						</div>
+						<div class="tariff__article-box-right">
+							<div class="tariff__article-text">
+								<h4 class="tariff__article-title tariff__article-title_size-m">Что входит</h4>
+								<ul class="tariff__article-list">
+									<li class="tariff__article-item">Сайт на CMS WordPress</li>
+									<li class="tariff__article-item">Одна посадочная страница</li>
+									<li class="tariff__article-item">От 7 дней</li>
+								</ul>
+							</div>
+							<p class="tariff__article-price tariff__article-price_circle">От <span class="tariff__article-value">7 000 P</span></p>
 						</div>
 					</div>
 				</div>
@@ -237,7 +409,7 @@
 	</div>
 
 
-	<script src="js/app.min.js?_v=20220528235417"></script>
+	<script src="js/app.min.js?_v=20220611192210"></script>
 
 
 

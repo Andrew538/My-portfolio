@@ -193,7 +193,7 @@
     })();
     (() => {
         "use strict";
-        const modules_flsModules = {};
+        const flsModules = {};
         function isWebp() {
             function testWebP(callback) {
                 let webP = new Image;
@@ -332,7 +332,7 @@
             bodyUnlock();
             document.documentElement.classList.remove("menu-open");
         }
-        function functions_FLS(message) {
+        function FLS(message) {
             setTimeout((() => {
                 if (window.FLS) console.log(message);
             }), 0);
@@ -583,12 +583,12 @@
                 if (!this.isOpen && this.lastFocusEl) this.lastFocusEl.focus(); else focusable[0].focus();
             }
             popupLogging(message) {
-                this.options.logging ? functions_FLS(`[Попапос]: ${message}`) : null;
+                this.options.logging ? FLS(`[Попапос]: ${message}`) : null;
             }
         }
-        modules_flsModules.popup = new Popup({});
+        flsModules.popup = new Popup({});
         var smooth_scroll_polyfills_min = __webpack_require__(2);
-        let gotoblock_gotoBlock = (targetBlock, noHeader = false, speed = 500, offsetTop = 0) => {
+        let gotoBlock = (targetBlock, noHeader = false, speed = 500, offsetTop = 0) => {
             const targetBlockElement = document.querySelector(targetBlock);
             if (targetBlockElement) {
                 let headerItem = "";
@@ -615,8 +615,8 @@
                         behavior: "smooth"
                     });
                 }
-                functions_FLS(`[gotoBlock]: Юхуу...едем к ${targetBlock}`);
-            } else functions_FLS(`[gotoBlock]: Ой ой..Такого блока нет на странице: ${targetBlock}`);
+                FLS(`[gotoBlock]: Юхуу...едем к ${targetBlock}`);
+            } else FLS(`[gotoBlock]: Ой ой..Такого блока нет на странице: ${targetBlock}`);
         };
         let formValidate = {
             getErrors(form) {
@@ -671,11 +671,11 @@
                         const checkbox = checkboxes[index];
                         checkbox.checked = false;
                     }
-                    if (modules_flsModules.select) {
+                    if (flsModules.select) {
                         let selects = form.querySelectorAll(".select");
                         if (selects.length) for (let index = 0; index < selects.length; index++) {
                             const select = selects[index].querySelector("select");
-                            modules_flsModules.select.selectBuild(select);
+                            flsModules.select.selectBuild(select);
                         }
                     }
                 }), 0);
@@ -684,6 +684,71 @@
                 return !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(formRequiredItem.value);
             }
         };
+        function formSubmit(options = {
+            validate: true
+        }) {
+            const forms = document.forms;
+            if (forms.length) for (const form of forms) {
+                form.addEventListener("submit", (function(e) {
+                    const form = e.target;
+                    formSubmitAction(form, e);
+                }));
+                form.addEventListener("reset", (function(e) {
+                    const form = e.target;
+                    formValidate.formClean(form);
+                }));
+            }
+            async function formSubmitAction(form, e) {
+                const error = !form.hasAttribute("data-no-validate") ? formValidate.getErrors(form) : 0;
+                if (0 === error) {
+                    const ajax = form.hasAttribute("data-ajax");
+                    if (ajax) {
+                        e.preventDefault();
+                        const formAction = form.getAttribute("action") ? form.getAttribute("action").trim() : "#";
+                        const formMethod = form.getAttribute("method") ? form.getAttribute("method").trim() : "GET";
+                        const formData = new FormData(form);
+                        form.classList.add("_sending");
+                        const response = await fetch(formAction, {
+                            method: formMethod,
+                            body: formData
+                        });
+                        if (response.ok) {
+                            await response.json();
+                            form.classList.remove("_sending");
+                            formSent(form);
+                        } else {
+                            alert("Ошибка");
+                            form.classList.remove("_sending");
+                        }
+                    } else if (form.hasAttribute("data-dev")) {
+                        e.preventDefault();
+                        formSent(form);
+                    }
+                } else {
+                    e.preventDefault();
+                    const formError = form.querySelector("._form-error");
+                    if (formError && form.hasAttribute("data-goto-error")) gotoBlock(formError, true, 1e3);
+                }
+            }
+            function formSent(form) {
+                document.dispatchEvent(new CustomEvent("formSent", {
+                    detail: {
+                        form
+                    }
+                }));
+                setTimeout((() => {
+                    if (flsModules.popup) {
+                        const popup = form.dataset.popupMessage;
+                        popup ? flsModules.popup.open(popup) : null;
+                    }
+                }), 0);
+                formValidate.formClean(form);
+                formLogging(`Форма отправлена!`);
+            }
+            function formLogging(message) {
+                FLS(`[Формы]: ${message}`);
+            }
+        }
         document.querySelector(".form__button");
         class SelectConstructor {
             constructor(props, data = null) {
@@ -1001,10 +1066,10 @@
                 }));
             }
             setLogging(message) {
-                this.config.logging ? functions_FLS(`[select]: ${message}`) : null;
+                this.config.logging ? FLS(`[select]: ${message}`) : null;
             }
         }
-        modules_flsModules.select = new SelectConstructor({});
+        flsModules.select = new SelectConstructor({});
         class ScrollWatcher {
             constructor(props) {
                 let defaultConfig = {
@@ -1085,7 +1150,7 @@
                 this.scrollWatcherLogging(`Я перестал следить за ${targetElement.classList}`);
             }
             scrollWatcherLogging(message) {
-                this.config.logging ? functions_FLS(`[Наблюдатель]: ${message}`) : null;
+                this.config.logging ? FLS(`[Наблюдатель]: ${message}`) : null;
             }
             scrollWatcherCallback(entry, observer) {
                 const targetElement = entry.target;
@@ -1098,7 +1163,7 @@
                 }));
             }
         }
-        modules_flsModules.watcher = new ScrollWatcher({});
+        flsModules.watcher = new ScrollWatcher({});
         let addWindowScrollEvent = false;
         function pageNavigation() {
             document.addEventListener("click", pageNavigationAction);
@@ -1112,7 +1177,7 @@
                         const noHeader = gotoLink.hasAttribute("data-goto-header") ? true : false;
                         const gotoSpeed = gotoLink.dataset.gotoSpeed ? gotoLink.dataset.gotoSpeed : 500;
                         const offsetTop = gotoLink.dataset.gotoTop ? parseInt(gotoLink.dataset.gotoTop) : 0;
-                        gotoblock_gotoBlock(gotoLinkSelector, noHeader, gotoSpeed, offsetTop);
+                        gotoBlock(gotoLinkSelector, noHeader, gotoSpeed, offsetTop);
                         e.preventDefault();
                     }
                 } else if ("watcherCallback" === e.type && e.detail) {
@@ -1135,7 +1200,7 @@
             if (getHash()) {
                 let goToHash;
                 if (document.querySelector(`#${getHash()}`)) goToHash = `#${getHash()}`; else if (document.querySelector(`.${getHash()}`)) goToHash = `.${getHash()}`;
-                goToHash ? gotoblock_gotoBlock(goToHash, true, 500, 20) : null;
+                goToHash ? gotoBlock(goToHash, true, 500, 20) : null;
             }
         }
         function headerScroll() {
@@ -1175,6 +1240,7 @@
         window["FLS"] = true;
         isWebp();
         menuInit();
+        formSubmit();
         pageNavigation();
         headerScroll();
     })();
