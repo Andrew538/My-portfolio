@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20220611214229">
+	<link rel="stylesheet" href="css/style.min.css?_v=20220612222126">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -66,7 +66,7 @@
 
 		<main class="page">
 			<section class="banner">
-				<h2 class="stages-works__title" style="visibility: hidden; font-size: 0px; display: inline; width: 0px;">Фото разработчика</h2>
+				<h2 class="banner__title" style="visibility: hidden; font-size: 0px; display: inline; width: 0px;">Фото разработчика</h2>
 				<div class="banner__container">
 					<div class="banner__cover-img">
 						<picture><source srcset="img/image.webp" type="image/webp"><img class="banner__image" src="img/image.png" alt="Фото разработчика"></picture>
@@ -82,7 +82,7 @@
 						<button class="modal-button" data-popup=".popup">Обсудить проект</button>
 						<ul class="social">
 							<li class="social__item">
-								<a href="№">Vk</a>
+								<a href="page.html">Vk</a>
 							</li>
 							<li class="social__item social__item_circle">
 								<a href="№">Instagram</a>
@@ -147,16 +147,25 @@
 					<h2 class="stages-works__title" style="visibility: hidden; font-size: 0px; display: inline; width: 0px;">Этапы работы</h2>
 					<ol class="stages-works__list">
 						<li class="stages-works__item stages-works__item_border">
-							<p class="stage-works__text"> <span class="stages-works__text_number">01</span> Вы заказываете сайт</p>
-							<p class="stage-works__deskription">Связываетесь со мной по телефону или через заявку на сайте</p>
+							<div class="stages-works__item-box">
+								<span class="stages-works__text-number">01</span>
+								<p class="stages-works__text"> Вы&nbsp;заказываете сайт</p>
+							</div>
+							<p class="stages-works__deskription">Связываетесь со мной по телефону или через заявку на сайте</p>
 						</li>
 						<li class="stages-works__item ">
-							<p class="stage-works__text"><span class="stages-works__text_number">02</span>Обговариваем детали</p>
-							<p class="stage-works__deskription">Созваниваемся или списываемся любым удобным для вас способом</p>
+							<div class="stages-works__item-box">
+								<span class="stages-works__text-number">02</span>
+								<p class="stages-works__text">Обговариваем детали</p>
+							</div>
+							<p class="stages-works__deskription">Созваниваемся или списываемся любым удобным для вас способом</p>
 						</li>
 						<li class="stages-works__item stages-works__item_border">
-							<p class="stage-works__text"><span class="stages-works__text_number">03</span>Этап программирования</p>
-							<p class="stage-works__deskription">Верстаю сайт по вашему проекту пиксель в пиксель</p>
+							<div class="stages-works__item-box">
+								<span class="stages-works__text-number">03</span>
+								<p class="stages-works__text">Этап программирования</p>
+							</div>
+							<p class="stages-works__deskription">Верстаю сайт по вашему проекту пиксель в пиксель</p>
 						</li>
 					</ol>
 				</div>
@@ -366,7 +375,7 @@
 							<button class="modal-button modal-button__tariff" data-popup=".popup">Обсудить проект</button>
 						</div>
 						<div class="tariff__article-box-right">
-							<div class="tariff__article-text">
+							<div class="tariff__article-text tariff__article-text_height">
 								<h4 class="tariff__article-title tariff__article-title_size-m">Что входит</h4>
 								<ul class="tariff__article-list">
 									<li class="tariff__article-item">Сайт на CMS WordPress</li>
@@ -377,11 +386,117 @@
 							<p class="tariff__article-price tariff__article-price_circle">От <span class="tariff__article-value">7 000 P</span></p>
 						</div>
 					</div>
+					<div class="tariff__article">
+						<div class="tariff__article-box-left">
+							<div class="tariff__article-text">
+								<h3 class="tariff__article-title">Разработка корпоративного сайта</h3>
+								<p class="tariff__article-deskription">Небольшой сайт с n-количеством страниц</p>
+							</div>
+							<button class="modal-button modal-button__tariff" data-popup=".popup">Обсудить проект</button>
+						</div>
+						<div class="tariff__article-box-right">
+							<div class="tariff__article-text tariff__article-text_height">
+								<h4 class="tariff__article-title tariff__article-title_size-m">Что входит</h4>
+								<ul class="tariff__article-list">
+									<li class="tariff__article-item">Сайт на CMS WordPress</li>
+									<li class="tariff__article-item">От 2-10 страниц</li>
+									<li class="tariff__article-item">От 15 дней</li>
+								</ul>
+							</div>
+							<p class="tariff__article-price">От <span class="tariff__article-value">10 000 P</span></p>
+						</div>
+					</div>
+					<div class="tariff__article tariff__article_border">
+						<div class="tariff__article-box-left">
+							<div class="tariff__article-text">
+								<h3 class="tariff__article-title">Разработка<br>лэндинга или сайт визитки</h3>
+								<p class="tariff__article-deskription">Небольшой сайт состоящий из одной страницы</p>
+							</div>
+							<button class="modal-button modal-button__tariff" data-popup=".popup">Обсудить проект</button>
+						</div>
+						<div class="tariff__article-box-right">
+							<div class="tariff__article-text tariff__article-text_height">
+								<h4 class="tariff__article-title tariff__article-title_size-m">Что входит</h4>
+								<ul class="tariff__article-list">
+									<li class="tariff__article-item">Сайт на CMS WordPress</li>
+									<li class="tariff__article-item">От 2-10 страниц, корзина, карточка товара</li>
+									<li class="tariff__article-item">От 20 дней</li>
+								</ul>
+							</div>
+							<p class="tariff__article-price tariff__article-price_circle">От <span class="tariff__article-value">15 000 P</span></p>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="feedback">
+				<div class="feedback__container">
+					<div class="feedback__header">
+						<h2 class="feedback__title">Расскажите о&nbsp;своем проекте</h2>
+						<p class="feedback__description">Воспользуйтесь формой обратнойсвязи, чтобы обсудить ваш проект, заполните все поля, и я свяжусь с вами в ближайшее время</p>
+					</div>
+					<div class="feedback__box">
+						<ul class="social">
+							<li class="social__item">
+								<a href="page.html">Vk</a>
+							</li>
+							<li class="social__item">
+								<a href="№">Instagram</a>
+							</li>
+							<li class="social__item">
+								<a href="№">Telegram</a>
+							</li>
+						</ul>
+						<form class="form feedback__form">
+							<div class="form__input-box">
+								<label for="formContact" class="form__label">Телефон или почта</label>
+								<input id="formContact" autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="Введите телефон" class="form__input">
+							</div>
+							<div class="form__item">
+								<div class="form__label">Выберите удобный способ связи</div>
+								<select name="age" class="select">
+									<option selected>Telegram</option>
+									<option>WhatsApp</option>
+									<option>Viber</option>
+									<option>Звонок на телефон</option>
+									<option>SMS сообщение</option>
+								</select>
+							</div>
+							<button type="submit" class="form__button">Отправить</button>
+						</form>
+					</div>
 				</div>
 			</section>
 		</main>
 		<footer class="footer">
 			<div class="footer__container">
+				<div class="footer__menu">
+					<div class="footer__menu-body">
+						<ul class="footer__menu-list">
+							<li class="footer__menu-item"><a href="#" class="footer__menu-link">Обо мне</a></li>
+							<li class="footer__menu-item"><a href="#" class="footer__menu-link">Портфолио</a></li>
+							<li class="footer__menu-item"><a href="#" class="footer__menu-link">Этапы работ</a></li>
+							<li class="footer__menu-item"><a href="#" class="footer__menu-link">Цена</a></li>
+							<li class="footer__menu-item"><a href="#" class="footer__menu-link">Обратная связь</a></li>
+						</ul>
+						<div class="footer-contacts">
+							<ul class="footer-contacts__list">
+								<li class="footer-contacts__item footer-contacts__item_border">
+									<a class="footer-contacts__tel" href="tel:89237777777">8 923 777-77-77</a>
+								</li>
+								<li class="footer-contacts__item">
+									<a class="footer-contacts__mail" href="mailto:andrew742183@mail.ru">andrew742183@mail.ru</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="copyright">
+					<p class="copyright__text">&copy; 2020, Все права защищены</p>
+					<div class="copyright__box">
+						<p class="copyright__author">Сделано в рамках курса учебной платформы</p>
+						<a href="#" class="copyright__author-link">Anna Blok</a>
+					</div>
+				</div>
 			</div>
 		</footer>
 	</div>
@@ -419,7 +534,7 @@
 	</div>
 
 
-	<script src="js/app.min.js?_v=20220611214229"></script>
+	<script src="js/app.min.js?_v=20220612222126"></script>
 
 
 
