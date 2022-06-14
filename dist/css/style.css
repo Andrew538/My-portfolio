@@ -1268,21 +1268,33 @@ body::after {
   display: grid;
   -ms-grid-columns: (1fr)[2];
   grid-template-columns: repeat(2, 1fr);
-  -webkit-column-gap: 30px;
-     -moz-column-gap: 30px;
-          column-gap: 30px;
-  row-gap: 60px;
 }
 
-@supports (row-gap: clamp( 2.25rem , 1.6785714286rem  +  2.8571428571vw , 3.75rem )) {
+@supports ((-moz-column-gap: clamp( 1.5625rem , 0.9672619048rem  +  2.9761904762vw , 3.125rem )) or (column-gap: clamp( 1.5625rem , 0.9672619048rem  +  2.9761904762vw , 3.125rem ))) {
   .advantage__list {
-    row-gap: clamp( 2.25rem , 1.6785714286rem  +  2.8571428571vw , 3.75rem );
+    -webkit-column-gap: clamp( 1.5625rem , 0.9672619048rem  +  2.9761904762vw , 3.125rem );
+       -moz-column-gap: clamp( 1.5625rem , 0.9672619048rem  +  2.9761904762vw , 3.125rem );
+            column-gap: clamp( 1.5625rem , 0.9672619048rem  +  2.9761904762vw , 3.125rem );
   }
 }
 
-@supports not (row-gap: clamp( 2.25rem , 1.6785714286rem  +  2.8571428571vw , 3.75rem )) {
+@supports not ((-moz-column-gap: clamp( 1.5625rem , 0.9672619048rem  +  2.9761904762vw , 3.125rem )) or (column-gap: clamp( 1.5625rem , 0.9672619048rem  +  2.9761904762vw , 3.125rem ))) {
   .advantage__list {
-    row-gap: calc(2.25rem + 1.5 * (100vw - 20rem) / 52.5);
+    -webkit-column-gap: calc(1.5625rem + 1.5625 * (100vw - 20rem) / 52.5);
+       -moz-column-gap: calc(1.5625rem + 1.5625 * (100vw - 20rem) / 52.5);
+            column-gap: calc(1.5625rem + 1.5625 * (100vw - 20rem) / 52.5);
+  }
+}
+
+@supports (row-gap: clamp( 1.875rem , 1.1607142857rem  +  3.5714285714vw , 3.75rem )) {
+  .advantage__list {
+    row-gap: clamp( 1.875rem , 1.1607142857rem  +  3.5714285714vw , 3.75rem );
+  }
+}
+
+@supports not (row-gap: clamp( 1.875rem , 1.1607142857rem  +  3.5714285714vw , 3.75rem )) {
+  .advantage__list {
+    row-gap: calc(1.875rem + 1.875 * (100vw - 20rem) / 52.5);
   }
 }
 
@@ -1291,9 +1303,20 @@ body::after {
 }
 
 .advantage__title {
-  font-size: 16px;
   font-weight: 700;
   line-height: 150%;
+}
+
+@supports (font-size: clamp( 0.725rem , 0.6202380952rem  +  0.5238095238vw , 1rem )) {
+  .advantage__title {
+    font-size: clamp( 0.725rem , 0.6202380952rem  +  0.5238095238vw , 1rem );
+  }
+}
+
+@supports not (font-size: clamp( 0.725rem , 0.6202380952rem  +  0.5238095238vw , 1rem )) {
+  .advantage__title {
+    font-size: calc(0.725rem + 0.275 * (100vw - 20rem) / 52.5);
+  }
 }
 
 .advantage__deskription {
@@ -1370,29 +1393,29 @@ body::after {
   gap: 8%;
 }
 
-@supports (font-size: clamp( 1rem , 0.7142857143rem  +  1.4285714286vw , 1.75rem )) {
+@supports (font-size: clamp( 0.9625rem , 0.6625rem  +  1.5vw , 1.75rem )) {
   .stages-works__item-box {
-    font-size: clamp( 1rem , 0.7142857143rem  +  1.4285714286vw , 1.75rem );
+    font-size: clamp( 0.9625rem , 0.6625rem  +  1.5vw , 1.75rem );
   }
 }
 
-@supports not (font-size: clamp( 1rem , 0.7142857143rem  +  1.4285714286vw , 1.75rem )) {
+@supports not (font-size: clamp( 0.9625rem , 0.6625rem  +  1.5vw , 1.75rem )) {
   .stages-works__item-box {
-    font-size: calc(1rem + 0.75 * (100vw - 20rem) / 52.5);
+    font-size: calc(0.9625rem + 0.7875 * (100vw - 20rem) / 52.5);
   }
 }
 
-@supports (flex-basis: clamp( 10rem , 0.7142857143rem  +  46.4285714286vw , 34.375rem )) {
+@supports (flex-basis: clamp( 9.8125rem , 0.4553571429rem  +  46.7857142857vw , 34.375rem )) {
   .stages-works__item-box {
-    -ms-flex-preferred-size: clamp( 10rem , 0.7142857143rem  +  46.4285714286vw , 34.375rem );
-        flex-basis: clamp( 10rem , 0.7142857143rem  +  46.4285714286vw , 34.375rem );
+    -ms-flex-preferred-size: clamp( 9.8125rem , 0.4553571429rem  +  46.7857142857vw , 34.375rem );
+        flex-basis: clamp( 9.8125rem , 0.4553571429rem  +  46.7857142857vw , 34.375rem );
   }
 }
 
-@supports not (flex-basis: clamp( 10rem , 0.7142857143rem  +  46.4285714286vw , 34.375rem )) {
+@supports not (flex-basis: clamp( 9.8125rem , 0.4553571429rem  +  46.7857142857vw , 34.375rem )) {
   .stages-works__item-box {
-    -ms-flex-preferred-size: calc(10rem + 24.375 * (100vw - 20rem) / 52.5);
-        flex-basis: calc(10rem + 24.375 * (100vw - 20rem) / 52.5);
+    -ms-flex-preferred-size: calc(9.8125rem + 24.5625 * (100vw - 20rem) / 52.5);
+        flex-basis: calc(9.8125rem + 24.5625 * (100vw - 20rem) / 52.5);
   }
 }
 
@@ -1402,8 +1425,8 @@ body::after {
 
 .stages-works__deskription {
   opacity: 0.8;
-  -ms-flex-preferred-size: 559px;
-      flex-basis: 559px;
+  font-weight: 400;
+  line-height: 150%;
 }
 
 @supports (font-size: clamp( 0.75rem , 0.6547619048rem  +  0.4761904762vw , 1rem )) {
@@ -2191,15 +2214,15 @@ body::after {
   opacity: 0.8;
 }
 
-@supports (font-size: clamp( 1rem , 0.7142857143rem  +  1.4285714286vw , 1.75rem )) {
+@supports (font-size: clamp( 0.9375rem , 0.6279761905rem  +  1.5476190476vw , 1.75rem )) {
   .tariff__deskription {
-    font-size: clamp( 1rem , 0.7142857143rem  +  1.4285714286vw , 1.75rem );
+    font-size: clamp( 0.9375rem , 0.6279761905rem  +  1.5476190476vw , 1.75rem );
   }
 }
 
-@supports not (font-size: clamp( 1rem , 0.7142857143rem  +  1.4285714286vw , 1.75rem )) {
+@supports not (font-size: clamp( 0.9375rem , 0.6279761905rem  +  1.5476190476vw , 1.75rem )) {
   .tariff__deskription {
-    font-size: calc(1rem + 0.75 * (100vw - 20rem) / 52.5);
+    font-size: calc(0.9375rem + 0.8125 * (100vw - 20rem) / 52.5);
   }
 }
 
@@ -2370,15 +2393,15 @@ body::after {
   }
 }
 
-@supports (font-size: clamp( 0.625rem , 0.4821428571rem  +  0.7142857143vw , 1rem )) {
+@supports (font-size: clamp( 0.75rem , 0.6547619048rem  +  0.4761904762vw , 1rem )) {
   .tariff__article-title_size-m {
-    font-size: clamp( 0.625rem , 0.4821428571rem  +  0.7142857143vw , 1rem );
+    font-size: clamp( 0.75rem , 0.6547619048rem  +  0.4761904762vw , 1rem );
   }
 }
 
-@supports not (font-size: clamp( 0.625rem , 0.4821428571rem  +  0.7142857143vw , 1rem )) {
+@supports not (font-size: clamp( 0.75rem , 0.6547619048rem  +  0.4761904762vw , 1rem )) {
   .tariff__article-title_size-m {
-    font-size: calc(0.625rem + 0.375 * (100vw - 20rem) / 52.5);
+    font-size: calc(0.75rem + 0.25 * (100vw - 20rem) / 52.5);
   }
 }
 
@@ -3105,10 +3128,6 @@ body::after {
 }
 
 @media (max-width: 29.99875em) {
-  .advantage__title {
-    font-size: 12px;
-  }
-
   .stages-works__item-box {
     display: block;
   }
