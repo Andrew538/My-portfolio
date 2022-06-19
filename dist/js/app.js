@@ -1246,7 +1246,7 @@
         (function() {
             let currentBrowser;
             if (navigator.userAgent.indexOf("Firefox") > -1) currentBrowser = "firefox"; else if (navigator.userAgent.indexOf("Opera") > -1) currentBrowser = "opera"; else if (navigator.userAgent.indexOf("Trident") > -1) currentBrowser = "explorer"; else if (navigator.userAgent.indexOf("Edge") > -1) currentBrowser = "edge"; else if (navigator.userAgent.indexOf("Chrome") > -1) currentBrowser = "chrome"; else if (navigator.userAgent.indexOf("Safari") > -1) currentBrowser = "safari"; else currentBrowser = "unknown";
-            alert("You are using: " + currentBrowser);
+            console.log("You are using: " + currentBrowser);
             document.documentElement.classList.add(currentBrowser);
         })();
     })();
