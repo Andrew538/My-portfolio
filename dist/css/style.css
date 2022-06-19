@@ -79,6 +79,7 @@ h6 {
 
 body {
   font-weight: 400;
+  background-color: #232326;
 }
 
 .lock body {
@@ -189,7 +190,7 @@ textarea {
   color: #F3F2F0;
   text-align: left;
   border: none;
-  background-color: rgba(243, 242, 240, 0.16);
+  background-color: rgba(243, 242, 240, 0.1);
   cursor: pointer;
   width: 100%;
 }
@@ -387,7 +388,7 @@ body::after {
   -o-transition: transform 0.3s ease 0s;
   transition: transform 0.3s ease 0s;
   transition: transform 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
-  background-color: #141416;
+  background-color: #232326;
   padding: 20px;
   width: 100%;
   max-width: 600px;
@@ -505,9 +506,9 @@ body::after {
 }
 
 .header._header-show {
-  -webkit-transition: top 0.3s ease 0.1s;
-  -o-transition: top 0.3s ease 0.1s;
-  transition: top 0.3s ease 0.1s;
+  -webkit-transition: top 0.5s ease-in-out 0.8s;
+  -o-transition: top 0.5s ease-in-out 0.8s;
+  transition: top 0.5s ease-in-out 0.8s;
   top: 0;
   left: 0;
   right: 0;
@@ -597,10 +598,6 @@ body::after {
 .site-contacts__tel {
   border-right: 1px solid #F3F2F0;
   padding-right: 13px;
-}
-
-.footer {
-  background: #141416;
 }
 
 @supports (padding-bottom: clamp( 1.6875rem , 1.3303571429rem  +  1.7857142857vw , 2.625rem )) {
@@ -1652,7 +1649,9 @@ body::after {
 }
 
 .portfolio__bg {
-  background: #141416;
+  background: -webkit-gradient(linear, left top, left bottom, from(#141416), to(rgba(20, 20, 22, 0)));
+  background: -o-linear-gradient(top, #141416 0%, rgba(20, 20, 22, 0) 100%);
+  background: linear-gradient(180deg, #141416 0%, rgba(20, 20, 22, 0) 100%);
 }
 
 .portfolio__list {
@@ -1853,10 +1852,6 @@ body::after {
   line-height: 150%;
 }
 
-.additionally {
-  background: #141416;
-}
-
 .additionally__text {
   border-bottom: 1px solid rgba(243, 242, 240, 0.4);
 }
@@ -1879,10 +1874,6 @@ body::after {
   .additionally__deskription {
     font-size: calc(1rem + 0.75 * (100vw - 20rem) / 52.5);
   }
-}
-
-.excellence {
-  background: #141416;
 }
 
 .excellence-grid {
@@ -2031,7 +2022,6 @@ body::after {
 }
 
 .popular-technologies {
-  background: #141416;
   padding: 0px 0px 80px 0px;
 }
 
@@ -2248,7 +2238,6 @@ body::after {
 }
 
 .tariff {
-  background: #141416;
   padding: 0px 0px 116px 0px;
 }
 
@@ -2643,10 +2632,6 @@ body::after {
   .tariff__article-price_circle::before {
     left: calc(-1.125rem + -1.5 * (100vw - 20rem) / 52.5);
   }
-}
-
-.feedback {
-  background: #141416;
 }
 
 @supports (padding-bottom: clamp( 1.875rem , -0.6488095238rem  +  12.619047619vw , 8.5rem )) {
@@ -3100,7 +3085,7 @@ body::after {
     transition: left 0.3s ease 0s;
     overflow: auto;
     text-align: center;
-    background-color: rgba(35, 35, 38, 0.95);
+    background-color: #232326;
   }
 
   .menu__list {
@@ -3284,6 +3269,7 @@ body::after {
     -webkit-box-align: inherit;
         -ms-flex-align: inherit;
             align-items: inherit;
+    gap: 30px;
   }
 
   .portfolio__list-text {
@@ -3303,6 +3289,10 @@ body::after {
           flex-basis: calc(15rem + 4.6875 * (100vw - 20rem) / 52.5);
     }
 }
+
+  .portfolio__list-title {
+    max-width: 300px;
+  }
 
 @supports (flex-basis: clamp( 10.625rem , 1.3392857143rem  +  46.4285714286vw , 35rem )) {
     .portfolio__list-link {
@@ -3438,10 +3428,6 @@ body::after {
 
   .portfolio__title {
     letter-spacing: -2px;
-  }
-
-  .portfolio__list-block {
-    gap: 30px;
   }
 
   .excellence-grid__item::before {
